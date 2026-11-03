@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F7">
+
+    <!-- Encabezado del Museo Virtual -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palacio de Cortés"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1D1D1F" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Museo Virtual CityTour • Cuernavaca, Morelos"
+        android:textSize="14sp"
+        android:textColor="#6E6E73"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Carrusel de Imágenes (ViewPager2) -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Panel Informativo -->
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Construcción civil virreinal del siglo XVI. Escucha la audioguía oficial para conocer su relevancia histórica."
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#3A3A3C"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Etiqueta Dinámica de Estado de Audio -->
+    <TextView
+        android:id="@+id/tvEstadoAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado: Detenido"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="#0071E3"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Controles Multimedia -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play"
+            android:layout_marginEnd="4dp"
+            app:icon="@android:drawable/ic_media_play"
+            android:backgroundTint="#0071E3" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pausa"
+            android:layout_marginEnd="4dp"
+            app:icon="@android:drawable/ic_media_pause"
+            android:backgroundTint="#FF9500" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop"
+            app:icon="@android:drawable/ic_delete"
+            android:backgroundTint="#FF3B30" />
+    </LinearLayout>
+
+</LinearLayout>
